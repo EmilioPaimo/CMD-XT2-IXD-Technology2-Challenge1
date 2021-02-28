@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #005288;
+	--success-color: #A7A9AC;
+	--warning-color: #0F1112;
+	--danger-color: #181C1F;
+    
+    /* light colors */
+    --light-color: #212529;
+    --light-second-color: #727475;
+    --light-background: #ffffff;
+    --light-second-background: #f1f1f1;
+   
+    /* dark colors */
+    --dark-color: #909090;
+    --dark-second-color: #f5f6fa;
+    --dark-background: #23242D;
+    --dark-second-background: #181818;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Futura', 'Arial', sans-serif;
+}
+
+/* Container */
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+}
+
+.container section {
+    min-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--primary-color);
+}
+
+.container section:nth-child(2) {
+    background: var(--success-color);
+}
+
+.container section:nth-child(3) {
+    background: var(--warning-color);
+}
+
+.container section:nth-child(4) {
+    background: var(--danger-color);
+}
+
+.container section .content1 {
+    max-width: 800px;
+    padding: 40px;
+    text-align: center;
+}
+
+.container section .content1 h2 {
+    font-size: 4em;
+    color: var(--dark-second-color);
+}
+
+.container section .content1 p {
+    font-size: 1.3em;
+    line-height: 1.4em;
+    color: var(--dark-second-color);
+}
+
+/* end container */
+
+/* Cursor */
+
+.cursor {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #fff;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+ul li:hover~.cursor {
+    transform: scale(6);
+}
+
+/* nav-link-dashboard customize */
+
+.nav-link-dashboard:link, .nav-link-dashboard:visited {
+    background-color: var(--dark-second-color);
+    color: var(--dark-background);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav-link-dashboard:hover, .nav-link-dashboard:active {
+    background-color: var(--danger-color);
+    color: var(--dark-second-color);
+}
+
+/* Media */
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    /* container */
+    .container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        transform: none !important;
+    }
+}
+
+/* Smaller Screen */
+
+@media screen and (max-width: 768px) {
+    /* container */
+    .container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        transform: none !important;
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SpaceX Landingpage</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- Icon in Tab-->
+    <link rel="icon" type="image/png" href="assets\logo\SpaceX_logo.png" />
+
+
+    <link rel="stylesheet" href="assets\css\style1.css">
+</head>
+
+<body>
+    <!-- Container -->
+    <div class="container" data-0="transform:translateX(0%);" data-1000="transform:translateX(-300%);">
+
+        <!-- Section -->
+        <section>
+            <div class="content1">
+                <h2>vehicle information</h2>
+                <p>Check the: <br>fuel<br>Speed<br>Acceleration<br>G-force</p>
+            </div>
+        </section>
+        <section>
+            <div class="content1">
+                <h2>Vehicle environment</h2>
+                <p>Check the: <br>Gravity<br>Distance traveled over time<br>Atmosphere</p>
+            </div>
+        </section>
+        <section>
+            <div class="content1">
+                <h2>Stocks data</h2>
+                <p>How many stocks left: <br>Food<br>Water<br>Candy</p>
+            </div>
+        </section>
+        <section>
+            <div class="content1">
+                <h2>Ride to Mars</h2>
+                <p>Hello travellers! welcome to the most powerful rocket ride.<br><br>
+                    On this platvorm you can see the latest traveling information, what was shown in the previous pages<br><br>
+                </p>
+                <a href="task.html" class="nav-link-dashboard">Check out the dashboard</a>
+            </div>
+        </section>
+
+        <!-- Cursor -->
+        <div class="cursor"></div>
+        <script>
+            const cursor = document.querySelector('.cursor');
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.pageX + 'px';
+                cursor.style.top = e.pageY + 'px';
+            })
+        </script>
+
+    </div> <!-- End of container -->
+
+    <!-- Load javascript -->
+    <script src="assets\javascript\main.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="assets\javascript\skrollr.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init();
+    </script>
+</body>
+
+</html>
